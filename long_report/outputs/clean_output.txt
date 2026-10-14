@@ -1,0 +1,31 @@
+reading C:\Users\신혜원\Documents\mas1004-assignment1-new\data\clean
+373 images, 4 classes, read in 11 s
+  1980s_1990s_korean_album_covers 93
+  2000s_korean_album_covers 79
+  2010s_korean_album_covers 87
+  2020s_korean_album_covers 114
+training on 298, testing on 75
+model has 11,178,564 parameters, 11,178,564 of them will be trained
+Epoch 1/10: train loss 1.4018, train accuracy 0.3490, test loss 1.2131, test accuracy 0.4667
+Epoch 2/10: train loss 0.4693, train accuracy 0.9262, test loss 1.1542, test accuracy 0.5467
+Epoch 3/10: train loss 0.2158, train accuracy 0.9966, test loss 1.1014, test accuracy 0.5333
+Epoch 4/10: train loss 0.1503, train accuracy 0.9933, test loss 1.0851, test accuracy 0.5333
+Epoch 5/10: train loss 0.0474, train accuracy 1.0000, test loss 1.0934, test accuracy 0.5200
+Epoch 6/10: train loss 0.0332, train accuracy 1.0000, test loss 1.0927, test accuracy 0.5333
+Epoch 7/10: train loss 0.0264, train accuracy 1.0000, test loss 1.0931, test accuracy 0.5200
+Epoch 8/10: train loss 0.0184, train accuracy 1.0000, test loss 1.0948, test accuracy 0.5200
+Epoch 9/10: train loss 0.0180, train accuracy 1.0000, test loss 1.0753, test accuracy 0.5333
+Epoch 10/10: train loss 0.0113, train accuracy 1.0000, test loss 1.0769, test accuracy 0.5600
+
+trained in 5.2 minutes
+train accuracy 100.0%
+test  accuracy 56.0%
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\clean_curves.png
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\clean_confusion.png
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\clean_worst.png
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\clean_model.pt
+
+One line for your experiment table:
+| clean | ImageNet | all layers | 10 | 0.0001 | 11,178,564 | 100.0% | 56.0% |
+
+To put this model on your web page: python src/export_web.py --tag clean

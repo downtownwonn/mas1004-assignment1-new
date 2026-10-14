@@ -1,0 +1,31 @@
+reading C:\Users\신혜원\Documents\mas1004-assignment1-new\data\clean
+632 images, 4 classes, read in 15 s
+  1980s_1990s_korean_album_covers 146
+  2000s_korean_album_covers 144
+  2010s_korean_album_covers 167
+  2020s_korean_album_covers 175
+training on 506, testing on 126
+model has 11,178,564 parameters, 11,178,564 of them will be trained
+Epoch 1/10: train loss 1.2815, train accuracy 0.4150, test loss 1.2403, test accuracy 0.4683
+Epoch 2/10: train loss 0.5128, train accuracy 0.8874, test loss 1.1808, test accuracy 0.5079
+Epoch 3/10: train loss 0.2805, train accuracy 0.9111, test loss 1.1517, test accuracy 0.5714
+Epoch 4/10: train loss 0.2171, train accuracy 0.9209, test loss 1.2179, test accuracy 0.5397
+Epoch 5/10: train loss 0.1988, train accuracy 0.9249, test loss 1.3139, test accuracy 0.5159
+Epoch 6/10: train loss 0.1568, train accuracy 0.9209, test loss 1.3125, test accuracy 0.5238
+Epoch 7/10: train loss 0.1504, train accuracy 0.9249, test loss 1.3296, test accuracy 0.5079
+Epoch 8/10: train loss 0.1372, train accuracy 0.9249, test loss 1.3465, test accuracy 0.5079
+Epoch 9/10: train loss 0.1407, train accuracy 0.9209, test loss 1.3756, test accuracy 0.5238
+Epoch 10/10: train loss 0.1366, train accuracy 0.9308, test loss 1.3818, test accuracy 0.4683
+
+trained in 6.6 minutes
+train accuracy 94.1%
+test  accuracy 46.8%
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\run_curves.png
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\run_confusion.png
+worst_examples is not written yet (Problem 5), so there is no run_worst.png this time
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\run_model.pt
+
+One line for your experiment table:
+| run | ImageNet | all layers | 10 | 0.0001 | 11,178,564 | 94.1% | 46.8% |
+
+To put this model on your web page: python src/export_web.py --tag run

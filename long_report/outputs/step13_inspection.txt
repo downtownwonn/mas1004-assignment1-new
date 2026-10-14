@@ -1,0 +1,10 @@
+Current readable clean counts: {"1980s_1990s_korean_album_covers": 93, "2000s_korean_album_covers": 79, "2010s_korean_album_covers": 87, "2020s_korean_album_covers": 114}
+Current clean total: 373; saved total: 373
+Current test split matches saved paths: True; test count: 75
+Clean images modified after model: 0
+CLEAN retraining needed: False
+Historical content hashes were not saved with training; count/split/timestamps establish consistency, not proof of identical bytes.
+Existing CLEAN model retained; no retraining.
+Running: uv run python src/check.py --compare run clean | tee results/compare.txt
+Comparison command exit code: 1 (see full report for any non-comparison checks)
+STEP13 FINISHED

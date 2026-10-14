@@ -1,0 +1,15 @@
+class                    downloaded  removed   kept  other
+1980s_1990s_korean_album_covers       1350       13    133   1204
+2000s_korean_album_covers        690       22    122    546
+2010s_korean_album_covers        690       31    136    523
+2020s_korean_album_covers        510       19    156    335
+
+reasons
+    22  중복된 앨범 커버이므로 정제 기준에 따라 제외합니다.
+    21  외국 앨범 커버이므로 한국 앨범 커버 정제 기준에 따라 제외합니다.
+    18  분류된 시대와 맞지 않는 앨범 커버이므로 정제 기준에 따라 제외합니다.
+    12  앨범 커버가 아닌 이미지이므로 정제 기준에 따라 제외합니다.
+     7  앨범 커버를 식별하기 어려운 이미지이므로 정제 기준에 따라 제외합니다.
+     5  대형 콜라주 이미지이므로 정제 기준에 따라 제외합니다.
+
+"other" is images that are in data/raw but neither in data/clean nor removed with `clean.py remove`, for example ones you deleted by hand. Their reasons are not recorded.

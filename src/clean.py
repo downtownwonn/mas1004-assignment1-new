@@ -356,9 +356,14 @@ def count(args):
         print("\nreasons")
         for reason, number in reasons.most_common():
             print(f"  {number:4d}  {reason}")
-    print("\n\"other\" is images that are in data/raw but neither in data/clean nor "
-          "removed with `clean.py remove`, for example ones you deleted by hand. "
-          "Their reasons are not recorded.")
+    print('\n"other" refers to images downloaded into data/raw that are no longer '
+          'present in data/clean or data/removed. During initial preprocessing, '
+          'more images than expected were downloaded because multiple search '
+          'queries were used to collect enough valid data. Many unsuitable '
+          'images appeared consecutively, so groups of these images were manually '
+          'removed to make the dataset manageable. The reasons for these manual '
+          'removals were not recorded individually. These images are counted as '
+          '"other".')
 
 
 def overlap(args):

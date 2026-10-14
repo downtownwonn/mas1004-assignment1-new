@@ -1,0 +1,31 @@
+reading C:\Users\신혜원\Documents\mas1004-assignment1-new\data\clean
+632 images, 4 classes, read in 27 s
+  1980s_1990s_korean_album_covers 146
+  2000s_korean_album_covers 144
+  2010s_korean_album_covers 167
+  2020s_korean_album_covers 175
+training on 506, testing on 126
+model has 11,178,564 parameters, 11,178,564 of them will be trained
+Epoch 1/10: train loss 1.3574, train accuracy 0.3478, test loss 1.3681, test accuracy 0.3333
+Epoch 2/10: train loss 1.0518, train accuracy 0.6225, test loss 1.4272, test accuracy 0.3413
+Epoch 3/10: train loss 0.8091, train accuracy 0.7451, test loss 1.3261, test accuracy 0.4524
+Epoch 4/10: train loss 0.5618, train accuracy 0.8182, test loss 1.4083, test accuracy 0.4286
+Epoch 5/10: train loss 0.4148, train accuracy 0.8854, test loss 1.9774, test accuracy 0.3968
+Epoch 6/10: train loss 0.3677, train accuracy 0.8794, test loss 2.2630, test accuracy 0.4286
+Epoch 7/10: train loss 0.3232, train accuracy 0.8933, test loss 1.6745, test accuracy 0.4365
+Epoch 8/10: train loss 0.3150, train accuracy 0.8794, test loss 1.8892, test accuracy 0.4206
+Epoch 9/10: train loss 0.2450, train accuracy 0.9190, test loss 1.8572, test accuracy 0.5000
+Epoch 10/10: train loss 0.2164, train accuracy 0.9170, test loss 1.7261, test accuracy 0.5079
+
+trained in 7.6 minutes
+train accuracy 93.3%
+test  accuracy 50.8%
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\scratch_curves.png
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\scratch_confusion.png
+worst_examples is not written yet (Problem 5), so there is no scratch_worst.png this time
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\scratch_model.pt
+
+One line for your experiment table:
+| scratch | random | all layers | 10 | 0.0001 | 11,178,564 | 93.3% | 50.8% |
+
+To put this model on your web page: python src/export_web.py --tag scratch

@@ -1,0 +1,35 @@
+MAS1004 Assignment 1, checking your work
+
+Training images  (C:\Users\신혜원\Documents\mas1004-assignment1-new\data\clean)
+----------------------------------------------------------------------------
+  1980s_1990s_korean_album_covers    93 images
+  2000s_korean_album_covers       79 images
+  2010s_korean_album_covers       87 images
+  2020s_korean_album_covers      114 images
+
+Your images from a new source  (C:\Users\신혜원\Documents\mas1004-assignment1-new\data\new_images)
+-----------------------------------------------------------------------------------------------
+  1980s_1990s_korean_album_covers     8 images
+  2000s_korean_album_covers        6 images
+  2010s_korean_album_covers        8 images
+  2020s_korean_album_covers        5 images
+
+The same image appearing twice
+------------------------------
+  ok       no file appears twice byte for byte. Near copies (the same picture resized or re-saved) are only found by `python src/clean.py suspects` and `python src/clean.py overlap`.
+
+The model you exported for the web page
+---------------------------------------
+  PROBLEM  docs/ is missing model.onnx, model.json, selftest.json. Run src/run.py and then src/export_web.py first.
+
+Your saved runs on your new images  (C:\Users\신혜원\Documents\mas1004-assignment1-new\data\new_images)
+----------------------------------------------------------------------------------------------------
+  run               test accuracy   new images
+  run                       46.8%        29.6%   (8/27)
+  clean                     56.0%        51.9%   (14/27)
+
+Summary
+-------
+  1 thing(s) to fix:
+    - docs/ is missing model.onnx, model.json, selftest.json. Run src/run.py and then src/export_web.py first.
+

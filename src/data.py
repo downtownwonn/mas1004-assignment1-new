@@ -50,7 +50,15 @@ def prepare_image(image):
     The web page does these same six steps in JavaScript. If your version is
     different, the self test badge at the top of your page turns red.
     """
-    raise NotImplementedError("Problem 2: fill in prepare_image")
+    from torchvision import transforms
+
+    prepare = transforms.Compose([
+        transforms.Resize(RESIZE, interpolation=transforms.InterpolationMode.BILINEAR),
+        transforms.CenterCrop(CROP),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=MEAN, std=STD),
+    ])
+    return prepare(image.convert("RGB")).numpy()
 
 
 def load_folder(root):
@@ -83,7 +91,32 @@ def load_folder(root):
     Memory: every image becomes 3 x 224 x 224 numbers of 4 bytes, about 0.6 MB.
     750 images is about 450 MB. That fits on Colab and on most laptops.
     """
-    raise NotImplementedError("Problem 2: fill in load_folder")
+    from pathlib import Path
+    from PIL import Image
+
+    root = Path(root)
+    folders = sorted(folder for folder in root.iterdir() if folder.is_dir())
+    class_names = [folder.name for folder in folders]
+    images, labels, paths = [], [], []
+
+    for label, folder in enumerate(folders):
+        for path in sorted(folder.iterdir()):
+            if not path.is_file() or path.suffix.lower() not in IMAGE_SUFFIXES:
+                continue
+            try:
+                with Image.open(path) as image:
+                    prepared = prepare_image(image)
+            except (OSError, ValueError, Image.DecompressionBombError):
+                continue
+            images.append(prepared)
+            labels.append(label)
+            paths.append(path)
+
+    X = np.stack(images).astype(np.float32, copy=False) if images else np.empty(
+        (0, 3, CROP, CROP), dtype=np.float32
+    )
+    y = np.asarray(labels, dtype=np.int64)
+    return X, y, class_names, paths
 
 
 def split_train_test(X, y, paths, test_ratio=0.2, seed=0):
@@ -102,4 +135,29 @@ def split_train_test(X, y, paths, test_ratio=0.2, seed=0):
         up with a class that has no test images at all, and then your accuracy
         number means nothing.
     """
-    raise NotImplementedError("Problem 2: fill in split_train_test")
+    if not 0 < test_ratio < 1:
+        raise ValueError("test_ratio must be between 0 and 1")
+    if len(X) != len(y) or len(y) != len(paths):
+        raise ValueError("X, y and paths must have the same length")
+    if len(set(paths)) != len(paths):
+        raise ValueError("Each image path must appear only once")
+
+    rng = np.random.default_rng(seed)
+    train_indices, test_indices = [], []
+    for label in np.unique(y):
+        indices = np.flatnonzero(y == label)
+        if len(indices) < 2:
+            raise ValueError("Each class needs at least two images to appear on both sides")
+        rng.shuffle(indices)
+        test_count = max(1, min(len(indices) - 1, round(len(indices) * test_ratio)))
+        test_indices.extend(indices[:test_count])
+        train_indices.extend(indices[test_count:])
+
+    train_indices = np.asarray(train_indices, dtype=np.int64)
+    test_indices = np.asarray(test_indices, dtype=np.int64)
+    rng.shuffle(train_indices)
+    rng.shuffle(test_indices)
+    return (
+        X[train_indices], y[train_indices], [paths[i] for i in train_indices],
+        X[test_indices], y[test_indices], [paths[i] for i in test_indices],
+    )

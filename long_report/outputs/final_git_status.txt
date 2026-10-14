@@ -1,0 +1,64 @@
+ M long_report/long_report.tex
+ M src/clean.py
+ M src/data.py
+ M src/evaluate.py
+ M src/train.py
+?? desktop.ini
+?? long_report/SUBMISSION.md
+?? long_report/figures/P2_preprocessing.png
+?? long_report/figures/clean_confusion.png
+?? long_report/figures/clean_curves.png
+?? long_report/figures/clean_worst.png
+?? long_report/figures/frozen_confusion.png
+?? long_report/figures/frozen_curves.png
+?? long_report/figures/junk_angle.jpg
+?? long_report/figures/junk_collage.jpg
+?? long_report/figures/junk_package.jpg
+?? long_report/figures/lr3e4_confusion.png
+?? long_report/figures/lr3e4_curves.png
+?? long_report/figures/new_1985.jpg
+?? long_report/figures/new_2012.png
+?? long_report/figures/new_2012_prime.png
+?? long_report/figures/new_2013.png
+?? long_report/figures/new_2014.png
+?? long_report/figures/p7_1_modified.png
+?? long_report/figures/p7_1_original.png
+?? long_report/figures/p7_2_modified.png
+?? long_report/figures/p7_2_original.png
+?? long_report/figures/p7_3_modified.png
+?? long_report/figures/p7_3_original.png
+?? long_report/figures/p7_4_modified1_front_view.png
+?? long_report/figures/p7_4_modified2_smile.png
+?? long_report/figures/p7_4_modified3_nocap.png
+?? long_report/figures/p7_4_modified4_hair.png
+?? long_report/figures/p7_4_modified5_glasses.png
+?? long_report/figures/p7_4_modified6_bigletter.png
+?? long_report/figures/p7_4_original.png
+?? long_report/figures/run_confusion.png
+?? long_report/figures/run_curves.png
+?? long_report/figures/scratch_confusion.png
+?? long_report/figures/scratch_curves.png
+?? long_report/long_report.zip
+?? long_report/outputs/accuracy_gaps.txt
+?? long_report/outputs/asset_audit.txt
+?? long_report/outputs/asset_manifest.csv
+?? long_report/outputs/check.txt
+?? long_report/outputs/clean_count.txt
+?? long_report/outputs/clean_output.txt
+?? long_report/outputs/compare.txt
+?? long_report/outputs/final_git_status.txt
+?? long_report/outputs/frozen_output.txt
+?? long_report/outputs/initial_git_status.txt
+?? long_report/outputs/lr3e4_output.txt
+?? long_report/outputs/overlap.txt
+?? long_report/outputs/protected_hashes.json
+?? long_report/outputs/removal_by_class.csv
+?? long_report/outputs/run_output.txt
+?? long_report/outputs/scratch_output.txt
+?? long_report/outputs/step13_inspection.txt
+?? long_report/outputs/verification.txt
+?? long_report/prepare_assets.py
+?? long_report/requirements_checklist.tex
+?? long_report/verify_report.py
+?? src/visualize_worst.py
+?? test_api.py

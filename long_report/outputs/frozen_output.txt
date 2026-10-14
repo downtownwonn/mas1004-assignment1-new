@@ -1,0 +1,31 @@
+reading C:\Users\신혜원\Documents\mas1004-assignment1-new\data\clean
+632 images, 4 classes, read in 26 s
+  1980s_1990s_korean_album_covers 146
+  2000s_korean_album_covers 144
+  2010s_korean_album_covers 167
+  2020s_korean_album_covers 175
+training on 506, testing on 126
+model has 11,178,564 parameters, 2,052 of them will be trained
+Epoch 1/10: train loss 1.4338, train accuracy 0.2846, test loss 1.3914, test accuracy 0.3571
+Epoch 2/10: train loss 1.3012, train accuracy 0.3893, test loss 1.3600, test accuracy 0.3889
+Epoch 3/10: train loss 1.1884, train accuracy 0.4763, test loss 1.3422, test accuracy 0.3571
+Epoch 4/10: train loss 1.1217, train accuracy 0.5099, test loss 1.3782, test accuracy 0.3968
+Epoch 5/10: train loss 1.0985, train accuracy 0.5455, test loss 1.3074, test accuracy 0.4127
+Epoch 6/10: train loss 1.0378, train accuracy 0.6067, test loss 1.3062, test accuracy 0.4365
+Epoch 7/10: train loss 0.9855, train accuracy 0.6403, test loss 1.2967, test accuracy 0.4206
+Epoch 8/10: train loss 0.9610, train accuracy 0.6285, test loss 1.3056, test accuracy 0.4127
+Epoch 9/10: train loss 0.9300, train accuracy 0.6403, test loss 1.2901, test accuracy 0.4603
+Epoch 10/10: train loss 0.8968, train accuracy 0.6739, test loss 1.2939, test accuracy 0.4365
+
+trained in 4.9 minutes
+train accuracy 71.9%
+test  accuracy 43.7%
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\frozen_curves.png
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\frozen_confusion.png
+worst_examples is not written yet (Problem 5), so there is no frozen_worst.png this time
+wrote C:\Users\신혜원\Documents\mas1004-assignment1-new\results\frozen_model.pt
+
+One line for your experiment table:
+| frozen | ImageNet | last layer | 10 | 0.001 | 2,052 | 71.9% | 43.7% |
+
+To put this model on your web page: python src/export_web.py --tag frozen
