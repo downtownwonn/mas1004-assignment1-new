@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="삼각함수와 쌍곡선함수 공식을 짝 맞추기로 외우는 수학 암기카드">
+  <title>공식의 짝 · 수학 암기카드</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="cards.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header class="masthead"><a class="brand" href="./"><span class="brand-icon">ƒ</span> 공식의 짝<span class="brand-en">MATH MATCH</span></a><span class="mode"><span></span> DARK MODE</span></header>
+    <section class="intro">
+      <p class="eyebrow">작은 연결이, 확실한 기억으로.</p>
+      <h1>공식에도 <span>짝이 있으니까.</span></h1>
+      <p class="description">문제 하나, 정답 하나. 맞는 두 카드를 이어 눌러보세요.<br>헷갈리던 공식이 조금씩 익숙해질 거예요.</p>
+    </section>
+    <section class="settings" aria-labelledby="settings-title">
+      <div class="section-heading"><h2 id="settings-title"><span class="step">01</span> 오늘 공부할 항목</h2><button id="select-all" class="text-button" type="button">전체 선택</button></div>
+      <p class="help">두세 항목씩 골라 섞어보세요. 한 항목부터 전체까지 자유롭게 선택할 수 있어요.</p>
+      <div id="categories" class="categories"></div>
+      <div class="settings-bottom"><span id="selection-count"></span><button id="start" class="primary" type="button">선택한 항목으로 시작 <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <section id="study" class="study" aria-labelledby="study-title" hidden>
+      <div class="section-heading study-heading"><h2 id="study-title"><span class="step">02</span> 짝을 연결해보세요</h2><button id="restart" class="text-button" type="button">↻ 다시 섞기</button></div>
+      <div class="stats"><span><strong id="matched-count">0 / 0</strong> 짝 완료</span><span><strong id="attempt-count">0</strong>번 시도</span><span class="timer"><strong id="timer">00:00</strong></span></div>
+      <progress id="progress" value="0" max="1" aria-label="맞힌 카드 진행률"></progress>
+      <p id="feedback" class="feedback" role="status" aria-live="polite">문제와 정답을 하나씩 눌러주세요. 어느 쪽부터 골라도 괜찮아요.</p>
+      <div id="completion" class="completion" hidden><span class="completion-icon">✦</span><h3>모든 짝을 찾았어요!</h3><p id="completion-detail"></p><div class="completion-actions"><button id="again" class="primary" type="button">한 번 더 섞기 ↗</button><button id="change-categories" class="secondary" type="button">항목 다시 고르기</button></div></div>
+      <div class="board-headings"><h3>QUESTION <span>문제</span></h3><h3>ANSWER <span>정답</span></h3></div>
+      <div class="board"><div id="questions" class="card-column" role="group" aria-label="문제 카드"></div><div id="answers" class="card-column" role="group" aria-label="정답 카드"></div></div>
+      <p class="board-note">카드는 위아래로 스크롤해서 모두 볼 수 있어요. 선택한 카드가 있는 쪽을 다시 누르면 선택이 바뀝니다.</p>
+    </section>
+    <aside class="notation"><span class="note-icon">i</span><div><strong>표기를 먼저 확인해요</strong><p>sin⁻¹은 1/sin이 아닌 arcsin(역함수)을 뜻해요. sinh⁻¹도 arsinh로 함께 표기합니다. 모든 미분은 x에 대한 미분이며, 삼각함수의 각도는 라디안입니다. 쌍곡선함수는 하이퍼볼릭 함수와 같은 말이에요.</p></div></aside>
+    <footer><span>공식의 짝</span><span>천천히, 정확하게. 나만의 속도로.</span></footer>
+  </main>
+</body>
+</html>
